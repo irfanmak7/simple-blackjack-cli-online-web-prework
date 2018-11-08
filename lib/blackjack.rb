@@ -64,5 +64,5 @@ def runner
   welcome
   initial_round
   hit?(initial_round)
-  if card
+  if card_
 end
