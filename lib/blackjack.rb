@@ -30,9 +30,9 @@ end
 
 def initial_round
   # code #initial_round here
-  total = deal_card + deal_card
+  card_total = deal_card + deal_card
   display_card_total(total)
-  total
+  card_total
 end
 
 def hit?(card_total)
@@ -42,7 +42,7 @@ def hit?(card_total)
   if user_input == 'h'
     card_total += deal_card
   elsif user_input == 's'
-
+    hit?
   else
     invalid_command
     prompt_user
@@ -63,4 +63,6 @@ def runner
   # code runner here
   welcome
   initial_round
+  hit?(initial_round)
+  if card
 end
